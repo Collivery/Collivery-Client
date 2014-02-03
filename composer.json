@@ -1,0 +1,22 @@
+{
+	"name": "mds/collivery",
+	"description": "Class that connects to MDS Collivery's Shipping API to handle all API communications as well as caching.",
+	"keywords": ["MDS", "Collivery", "Delivery", "Shipping", "API", "South Africa"],
+	"homepage": "http://github.com/Xethron/collivery-client",
+	"require": {
+		"php": ">=5.1.0"
+	},
+	"license": "GNU General Public License v3 or later",
+	"authors": [
+		{
+			"name": "Bernhard Breytenbach",
+			"email": "bernhard@collivery.co.za"
+		}
+	],
+	"autoload": {
+		"psr-0": {
+			"Mds": "src/"
+		}
+	},
+	"minimum-stability": "dev"
+}
