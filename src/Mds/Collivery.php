@@ -992,7 +992,7 @@ class Collivery
 	 * Returns the clients default address
 	 * @return int Address ID
 	 */
-	public function getDefaultAddress()
+	public function getDefaultAddressId()
 	{
 		return $this->default_address_id;
 	}
