@@ -298,7 +298,7 @@ class Collivery
 			}
 
 			if ( isset( $result['services'] ) ) {
-				if ( $this->check_cache != 0 ) Cache::put( 'collivery.services', $result['results'], 60*24*7 );
+				if ( $this->check_cache != 0 ) Cache::put( 'collivery.services', $result['services'], 60*24*7 );
 				return $result['services'];
 			} else {
 				if ( isset( $result['error_id'] ) )
