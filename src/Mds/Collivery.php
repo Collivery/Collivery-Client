@@ -186,7 +186,7 @@ class Collivery
 	 * @param  string  $name  Start of town/suburb name
 	 * @return array          List of towns and their ID's
 	 */
-	function searchTowns( $name )
+	public function searchTowns( $name )
 	{
 		if ( strlen( $name ) < 2 ) {
 			return $this->get_towns();
