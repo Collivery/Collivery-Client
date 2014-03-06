@@ -622,7 +622,7 @@ class Collivery
 		if ( ! isset( $data['full_name'] ) )
 			$this->setError( 'missing_data', 'full_name not set.' );
 
-		if ( isset( $data['phone'] ) || isset( $data['cellphone'] ) )
+		if ( ! isset( $data['phone'] ) AND ! isset( $data['cellphone'] ) )
 			$this->setError( 'missing_data', 'Please supply ether a phone or cellphone number...' );
 
 		if ( ! $this->hasErrors() ) {
@@ -666,7 +666,7 @@ class Collivery
 		if ( ! isset( $data['full_name'] ) )
 			$this->setError( 'missing_data', 'full_name not set.' );
 
-		if ( isset( $data['phone'] ) || isset( $data['cellphone'] ) )
+		if ( ! isset( $data['phone'] ) AND ! isset( $data['cellphone'] ) )
 			$this->setError( 'missing_data', 'Please supply ether a phone or cellphone number...' );
 
 		if ( ! $this->hasErrors() ) {
