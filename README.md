@@ -32,6 +32,30 @@ print_r( $towns );
 ?>
 ```
 
+Optionally, you could inject your own cache class, that has the required methods: has, get, put, forget
+
+```php
+<?php
+
+class MyCacheClass extends SomeCacheClass {
+    public function has( $name ) {
+        return $this->exists( $name ); // Use function from parent class
+    }
+    public function get( $name ) {
+        return $this->fetch( $name ); // Use function from parent class
+    }
+    public function put( $name, $value, $time = 1440 ) {
+        return $this->save( $name, $value, $time ); // Use function from parent class
+    }
+    public function forget( $name ) {
+        return $this->delete( $name ); // Use function from parent class
+    }
+}
+
+$collivery = new Collivery( $config, new MyCacheClass );
+
+```
+
 Here is a list of all the available functions:
 
 ```php

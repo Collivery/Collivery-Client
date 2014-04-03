@@ -1,28 +1,29 @@
 <?php namespace Mds;
 
-class Cache
-{
+class Cache {
 
-	private static $cache_dir = 'cache/mds_collivery/';
-	private static $cache;
+	private $cache_dir = 'cache/mds_collivery/';
+	private $cache;
 
-	protected static function load( $name ) {
-		if ( ! isset( Cache::$cache[ $name ] ) ) {
-			if ( file_exists( Cache::$cache_dir . $name ) && $content = file_get_contents( Cache::$cache_dir . $name ) ) {
-				Cache::$cache[ $name ] = json_decode( $content, true );
-				return Cache::$cache[ $name ];
+	protected function load( $name )
+	{
+		if ( ! isset( $this->cache[ $name ] ) ) {
+			if ( file_exists( $this->cache_dir . $name ) && $content = file_get_contents( $this->cache_dir . $name ) ) {
+				$this->cache[ $name ] = json_decode( $content, true );
+				return $this->cache[ $name ];
 			} else {
-				if ( ! is_dir( Cache::$cache_dir ) ) {
-					mkdir( Cache::$cache_dir );
+				if ( ! is_dir( $this->cache_dir ) ) {
+					mkdir( $this->cache_dir );
 				}
 			}
 		} else {
-			return Cache::$cache[ $name ];
+			return $this->cache[ $name ];
 		}
 	}
 
-	public static function has( $name ){
-		$cache = Cache::load( $name );
+	public function has( $name )
+	{
+		$cache = $this->load( $name );
 		if ( is_array( $cache ) && ( $cache['valid'] - 30 ) > time() ) {
 			return true;
 		} else {
@@ -30,8 +31,9 @@ class Cache
 		}
 	}
 
-	public static function get( $name ){
-		$cache = Cache::load( $name );
+	public function get( $name )
+	{
+		$cache = $this->load( $name );
 		if ( is_array( $cache ) && $cache['valid'] > time() ) {
 			return $cache['value'];
 		} else {
@@ -39,20 +41,22 @@ class Cache
 		}
 	}
 
-	public static function put( $name, $value, $time = 1440 ){
+	public function put( $name, $value, $time = 1440 )
+	{
 		$cache = array( 'value' => $value, 'valid' => time() + ( $time*60 ) );
-		if ( file_put_contents( Cache::$cache_dir . $name, json_encode( $cache ) ) ) {
-			Cache::$cache[ $name ] = $cache;
+		if ( file_put_contents( $this->cache_dir . $name, json_encode( $cache ) ) ) {
+			$this->cache[ $name ] = $cache;
 			return true;
 		} else {
 			return false;
 		}
 	}
 
-	public static function forget( $name ){
+	public function forget( $name )
+	{
 		$cache = array( 'value' => '', 'valid' => 0 );
-		if ( file_put_contents( Cache::$cache_dir . $name, json_encode( $cache ) ) ) {
-			Cache::$cache[ $name ] = $cache;
+		if ( file_put_contents( $this->cache_dir . $name, json_encode( $cache ) ) ) {
+			$this->cache[ $name ] = $cache;
 			return true;
 		} else {
 			return false;
