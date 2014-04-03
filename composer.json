@@ -1,8 +1,8 @@
 {
 	"name": "mds/collivery",
 	"description": "Class that connects to MDS Collivery's Shipping API to handle all API communications as well as caching.",
-	"keywords": ["MDS", "Collivery", "Delivery", "Shipping", "API", "South Africa"],
-	"homepage": "http://github.com/Xethron/collivery-client",
+	"keywords": ["MDS", "Collivery", "Courier", "Delivery", "Shipping", "API", "South Africa"],
+	"homepage": "https://github.com/Collivery/Collivery-Client",
 	"require": {
 		"php": ">=5.1.0"
 	},

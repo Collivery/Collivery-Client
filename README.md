@@ -5,8 +5,6 @@ This is a shipping module for MDS Collivery that handles all the communication b
 
 Included is a simple cache file that handles all the caching. Its a file based caching and increases speeds up to 1000 times if the cache is available. If you prefer using something like Memcache or another system, simply extend the existing classes.
 
-This class hasn't been fully tested and is a pre-release to help aid developers currently integrating with MDS Collivery. It should be fully tested within a month or so.
-
 The package is also available on Composer as mds/collivery.
 
 Usage
