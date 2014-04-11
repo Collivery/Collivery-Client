@@ -4,7 +4,8 @@
 	"keywords": ["MDS", "Collivery", "Courier", "Delivery", "Shipping", "API", "South Africa"],
 	"homepage": "https://github.com/Collivery/Collivery-Client",
 	"require": {
-		"php": ">=5.1.0"
+		"php": ">=5.1.0",
+		"illuminate/support": ">=4.1.0"
 	},
 	"license": "GNU General Public License v3 or later",
 	"authors": [
@@ -18,5 +19,9 @@
 			"Mds": "src/"
 		}
 	},
-	"minimum-stability": "dev"
+	"minimum-stability": "dev",
+	"require-dev": {
+		"phpunit/phpunit": ">=4.0.0",
+		"mockery/mockery": ">=0.9.0"
+	}
 }

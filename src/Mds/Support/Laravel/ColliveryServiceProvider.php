@@ -21,8 +21,9 @@ class ColliveryServiceProvider extends ServiceProvider {
 	{
 		$this->app->bind('collivery', function( $app )
 		{
-			$config = $app['config']->get('collivery::config');
-			$cache = $app['cache'];
+			$config = $app->make('config')->get('collivery::config');
+			$cache  = $app->make('cache');
+			
 			return new Collivery( $config, $cache );
 		});
 	}

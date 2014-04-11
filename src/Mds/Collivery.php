@@ -47,8 +47,6 @@ class Collivery {
 			$this->config->user_email    = 'demo@collivery.co.za';
 			$this->config->user_password = 'demo';
 		}
-
-		$this->authenticate();
 	}
 
 	/**
