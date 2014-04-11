@@ -347,28 +347,28 @@ $collivery->acceptCollivery( $collivery_id );
  *
  * @return  array
  */
-$collivery->getErrors() );
+$collivery->getErrors();
 
 /**
  * Check if there where any errors
  *
  * @return  bool
  */
-$collivery->hasErrors() );
+$collivery->hasErrors();
 
 /**
  * Clear the current errors
  *
  * @return  null
  */
-$collivery->clearErrors() );
+$collivery->clearErrors();
 
 /**
  * Disable Cached completely and retrieve data directly from the webservice
  *
  * @return  null
  */
-$collivery->disableCache() );
+$collivery->disableCache();
 
 /**
  * Ignore Cached data and retrieve data directly from the webservice
@@ -376,7 +376,7 @@ $collivery->disableCache() );
  *
  * @return  null
  */
-$collivery->ignoreCache() );
+$collivery->ignoreCache();
 
 /**
  * Check if cache exists before querying the webservice
@@ -384,13 +384,13 @@ $collivery->ignoreCache() );
  *
  * @return  null
  */
-$collivery->enableCache() );
+$collivery->enableCache();
 
 /**
  * Returns the clients default address
  * @return int Address ID
  */
-$collivery->getDefaultAddressId() );
+$collivery->getDefaultAddressId();
 
 ?>
 ```
