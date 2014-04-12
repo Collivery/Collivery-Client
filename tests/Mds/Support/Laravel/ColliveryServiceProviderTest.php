@@ -45,7 +45,10 @@ class ColliveryServiceProviderTest extends PHPUnit_Framework_TestCase
             ->with('collivery::config')
             ->andReturn([]);
 
-          $callback($mock);
+          $this->assertInstanceOf(
+            'Mds\Collivery',
+            $callback($mock)
+          );
 
           return true;
         })
