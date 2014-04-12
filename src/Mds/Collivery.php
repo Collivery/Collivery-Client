@@ -402,7 +402,7 @@ class Collivery {
 			}
 
 			if ( isset( $result['addresses'] ) ) {
-				if ( $this->check_cache != 0 ) $this->cache->put( 'collivery.addresses.'. $this->client_id, $result['addresses'], 60*24 );
+				if ( $this->check_cache != 0 && empty( $filter ) ) $this->cache->put( 'collivery.addresses.'. $this->client_id, $result['addresses'], 60*24 );
 				return $result['addresses'];
 			} else {
 				if ( isset( $result['error_id'] ) )
