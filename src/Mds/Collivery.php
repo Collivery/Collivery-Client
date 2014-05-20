@@ -280,7 +280,7 @@ class Collivery {
 				if ( isset( $result['error_id'] ) )
 					$this->setError( $result['error_id'], $result['error'] );
 				else
-					$this->setError( 'result_unexpected', 'No address_id returned.' );
+					$this->setError( 'result_unexpected', 'No results returned.' );
 
 				return false;
 			}
@@ -342,7 +342,7 @@ class Collivery {
 				if ( isset( $result['error_id'] ) )
 					$this->setError( $result['error_id'], $result['error'] );
 				else
-					$this->setError( 'result_unexpected', 'No address_id returned.' );
+					$this->setError( 'result_unexpected', 'No results returned.' );
 
 				return false;
 			}
@@ -935,6 +935,7 @@ class Collivery {
 	{
 		$this->setError( $e->faultcode, $e->faultstring );
 	}
+
 	/**
 	 * Add a new error
 	 *
