@@ -95,7 +95,11 @@ class Collivery {
 	 */
 	protected function authenticate()
 	{
-		if ( ( $this->check_cache == 2 ) && $this->cache->has( 'collivery.auth' ) && $this->cache->get( 'collivery.auth' )['user_email'] == $this->config->user_email ) {
+		if (
+			$this->check_cache == 2 &&
+			$this->cache->has( 'collivery.auth' ) &&
+			$this->cache->get( 'collivery.auth' )['user_email'] == $this->config->user_email
+		) {
 			$authenticate = $this->cache->get( 'collivery.auth' );
 
 			$this->default_address_id = $authenticate['default_address_id'];
