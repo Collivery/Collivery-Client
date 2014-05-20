@@ -2,18 +2,18 @@
 
 class Cache {
 
-	private $cache_dir = 'cache/mds_collivery/';
+	private $cache_dir = 'cache/';
 	private $cache;
 
 	protected function load( $name )
 	{
 		if ( ! isset( $this->cache[ $name ] ) ) {
-			if ( file_exists( $this->cache_dir . $name ) && $content = file_get_contents( $this->cache_dir . $name ) ) {
+			if ( file_exists( __DIR__ . $this->cache_dir . $name ) && $content = file_get_contents( __DIR__ . $this->cache_dir . $name ) ) {
 				$this->cache[ $name ] = json_decode( $content, true );
 				return $this->cache[ $name ];
 			} else {
-				if ( ! is_dir( $this->cache_dir ) ) {
-					mkdir( $this->cache_dir );
+				if ( ! is_dir( __DIR__ . $this->cache_dir ) ) {
+					mkdir( __DIR__ . $this->cache_dir );
 				}
 			}
 		} else {
@@ -44,7 +44,7 @@ class Cache {
 	public function put( $name, $value, $time = 1440 )
 	{
 		$cache = array( 'value' => $value, 'valid' => time() + ( $time*60 ) );
-		if ( file_put_contents( $this->cache_dir . $name, json_encode( $cache ) ) ) {
+		if ( file_put_contents( __DIR__ . $this->cache_dir . $name, json_encode( $cache ) ) ) {
 			$this->cache[ $name ] = $cache;
 			return true;
 		} else {
@@ -55,7 +55,7 @@ class Cache {
 	public function forget( $name )
 	{
 		$cache = array( 'value' => '', 'valid' => 0 );
-		if ( file_put_contents( $this->cache_dir . $name, json_encode( $cache ) ) ) {
+		if ( file_put_contents( __DIR__ . $this->cache_dir . $name, json_encode( $cache ) ) ) {
 			$this->cache[ $name ] = $cache;
 			return true;
 		} else {
