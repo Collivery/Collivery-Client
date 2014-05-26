@@ -142,7 +142,7 @@ class Collivery {
 				if ( isset( $result['error_id'] ) )
 					$this->setError( $result['error_id'], $result['error'] );
 				else
-					$this->setError( 'result_unexpected', 'No address_id returned.' );
+					$this->setError( 'result_unexpected', 'No result returned.' );
 
 				return false;
 			}
@@ -182,7 +182,7 @@ class Collivery {
 				if ( isset( $result['error_id'] ) )
 					$this->setError( $result['error_id'], $result['error'] );
 				else
-					$this->setError( 'result_unexpected', 'No address_id returned.' );
+					$this->setError( 'result_unexpected', 'No result returned.' );
 
 				return false;
 			}
@@ -220,7 +220,7 @@ class Collivery {
 				if ( isset( $result['error_id'] ) )
 					$this->setError( $result['error_id'], $result['error'] );
 				else
-					$this->setError( 'result_unexpected', 'No address_id returned.' );
+					$this->setError( 'result_unexpected', 'No result returned.' );
 
 				return false;
 			}
@@ -252,7 +252,7 @@ class Collivery {
 				if ( isset( $result['error_id'] ) )
 					$this->setError( $result['error_id'], $result['error'] );
 				else
-					$this->setError( 'result_unexpected', 'No address_id returned.' );
+					$this->setError( 'result_unexpected', 'No result returned.' );
 
 				return false;
 			}
@@ -443,7 +443,7 @@ class Collivery {
 				if ( isset( $result['error_id'] ) )
 					$this->setError( $result['error_id'], $result['error'] );
 				else
-					$this->setError( 'result_unexpected', 'No address_id returned.' );
+					$this->setError( 'result_unexpected', 'No result returned.' );
 
 				return false;
 			}
@@ -479,7 +479,7 @@ class Collivery {
 				if ( isset( $result['error_id'] ) )
 					$this->setError( $result['error_id'], $result['error'] );
 				else
-					$this->setError( 'result_unexpected', 'No address_id returned.' );
+					$this->setError( 'result_unexpected', 'No result returned.' );
 
 				return false;
 			}
@@ -515,7 +515,7 @@ class Collivery {
 				if ( isset( $result['error_id'] ) )
 					$this->setError( $result['error_id'], $result['error'] );
 				else
-					$this->setError( 'result_unexpected', 'No address_id returned.' );
+					$this->setError( 'result_unexpected', 'No result returned.' );
 
 				return false;
 			}
@@ -555,7 +555,7 @@ class Collivery {
 				if ( isset( $result['error_id'] ) )
 					$this->setError( $result['error_id'], $result['error'] );
 				else
-					$this->setError( 'result_unexpected', 'No address_id returned.' );
+					$this->setError( 'result_unexpected', 'No result returned.' );
 
 				return false;
 			}
@@ -594,7 +594,7 @@ class Collivery {
 				if ( isset( $result['error_id'] ) )
 					$this->setError( $result['error_id'], $result['error'] );
 				else
-					$this->setError( 'result_unexpected', 'No address_id returned.' );
+					$this->setError( 'result_unexpected', 'No result returned.' );
 
 				return false;
 			}
@@ -747,7 +747,7 @@ class Collivery {
 				if ( isset( $result['error_id'] ) )
 					$this->setError( $result['error_id'], $result['error'] );
 				else
-					$this->setError( 'result_unexpected', 'No address_id returned.' );
+					$this->setError( 'result_unexpected', 'No result returned.' );
 
 				return false;
 			}
@@ -823,7 +823,7 @@ class Collivery {
 				if ( isset( $result['error_id'] ) )
 					$this->setError( $result['error_id'], $result['error'] );
 				else
-					$this->setError( 'result_unexpected', 'No address_id returned.' );
+					$this->setError( 'result_unexpected', 'No result returned.' );
 
 				return false;
 			}
@@ -892,7 +892,7 @@ class Collivery {
 				if ( isset( $result['error_id'] ) )
 					$this->setError( $result['error_id'], $result['error'] );
 				else
-					$this->setError( 'result_unexpected', 'No address_id returned.' );
+					$this->setError( 'result_unexpected', 'No result returned.' );
 
 				return false;
 			}
@@ -925,7 +925,7 @@ class Collivery {
 			if ( isset( $result['error_id'] ) )
 				$this->setError( $result['error_id'], $result['error'] );
 			else
-				$this->setError( 'result_unexpected', 'No address_id returned.' );
+				$this->setError( 'result_unexpected', 'No result returned.' );
 
 			return false;
 		}
