@@ -672,14 +672,14 @@ class Collivery {
 		elseif ( ! is_array( $this->getAddress( $data['address_id'] ) ) )
 			$this->setError( 'invalid_data', 'Invalid address_id.' );
 
-		if ( ! isset( $data['street'] ) )
-			$this->setError( 'missing_data', 'street not set.' );
-
 		if ( ! isset( $data['full_name'] ) )
 			$this->setError( 'missing_data', 'full_name not set.' );
 
 		if ( ! isset( $data['phone'] ) and ! isset( $data['cellphone'] ) )
 			$this->setError( 'missing_data', 'Please supply ether a phone or cellphone number...' );
+
+		if ( ! isset( $data['email'] ) )
+			$this->setError( 'missing_data', 'email not set.' );
 
 		if ( ! $this->hasErrors() ) {
 			try {
@@ -690,13 +690,13 @@ class Collivery {
 				return false;
 			}
 
-			if ( isset( $result['address_id'] ) ) {
+			if ( isset( $result['contact_id'] ) ) {
 				return $result;
 			} else {
 				if ( isset( $result['error_id'] ) )
 					$this->setError( $result['error_id'], $result['error'] );
 				else
-					$this->setError( 'result_unexpected', 'No address_id returned.' );
+					$this->setError( 'result_unexpected', 'No contact_id returned.' );
 
 				return false;
 			}
