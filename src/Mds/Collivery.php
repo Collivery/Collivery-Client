@@ -683,7 +683,7 @@ class Collivery {
 
 		if ( ! $this->hasErrors() ) {
 			try {
-				$result = $this->client()->add_address( $data, $this->token );
+				$result = $this->client()->add_contact( $data, $this->token );
 				$this->cache->forget( 'collivery.addresses.'. $this->client_id );
 			} catch ( SoapFault $e ) {
 				$this->catchSoapFault( $e );
