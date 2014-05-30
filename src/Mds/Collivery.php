@@ -944,8 +944,8 @@ class Collivery {
 		if ( isset( $result['success'] ) ) {
 			return true;
 		} else {
-			if ( isset( $result['error'] ) )
-				$this->setError( 'invalid_cancellation', $result['error'] );
+			if ( isset( $result['error_id'] ) )
+				$this->setError( $result['error_id'], $result['error'] );
 			else
 				$this->setError( 'result_unexpected', 'No error returned.' );
 
