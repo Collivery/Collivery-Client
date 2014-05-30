@@ -927,33 +927,6 @@ class Collivery {
 	}
 
 	/**
-	 * Cancels a specified delivery
-	 *
-	 * @param int     $collivery_id ID of the delivery you want to cancel
-	 * @return boolean                 Has the Collivery been canceled
-	 */
-	public function cancelDelivery( $collivery_id )
-	{
-		try {
-			$result = $this->client()->cancel_collivery( $collivery_id, $this->token );
-		} catch ( SoapFault $e ) {
-			$this->catchSoapFault( $e );
-			return false;
-		}
-
-		if ( isset( $result['success'] ) ) {
-			return true;
-		} else {
-			if ( isset( $result['error'] ) )
-				$this->setError( 'invalid_cancellation', $result['error'] );
-			else
-				$this->setError( 'result_unexpected', 'No error returned.' );
-
-			return false;
-		}
-	}
-
-	/**
 	 * Handle error messages in SoapFault
 	 *
 	 * @param SoapFault $e SoapFault Object
