@@ -277,11 +277,33 @@ Array
 )
 
 /**
- * Retrieve the Proof of Delivery for a specific Collivery ID
+ * Retrieve the Proof of Delivery - PDF for a specific Collivery ID
  *
  * @link http://collivery.co.za/wsdocs/#get_pod
  */
 $collivery->getPod( $collivery_id );
+
+$pod = $collivery->getWayPod($collivery_id);
+Array
+(
+    [filename] => "1234567.pdf"
+    [mime] => "application/pdf"
+    [file] => "DQpGcmVlRm9ybWF0dGVyLmNvbQ0KDQogICAgSFRUUFMNCiAgICBGcmVlRGF0YUdlbmVyYXRvci5jb20NCiAgICBDb250YWN0DQoNCkZvcm1hdHRlcnMNCg0KICAgIEpTT04gRm9ybWF0dGVyDQogIC........."
+ )
+/**
+ * Retrieve the Waybill - PDF for a specific Collivery ID
+ *
+ * @link http://collivery.co.za/wsdocs/#get_pod
+ */
+$collivery->getWaybill( int $collivery_id );
+
+$waybill = $collivery->getWaybill($colliver_idy);
+Array
+(
+    [filename] => "1234567.pdf"
+    [mime] => "application/pdf"
+    [file] => "DQpGcmVlRm9ybWF0dGVyLmNvbQ0KDQogICAgSFRUUFMNCiAgICBGcmVlRGF0YUdlbmVyYXRvci5jb20NCiAgICBDb250YWN0DQoNCkZvcm1hdHRlcnMNCg0KICAgIEpTT04gRm9ybWF0dGVyDQogIC........."
+ )
 
 /**
  * Retrieve a list of Parcels with Images for a certain Collivery ID
