@@ -283,9 +283,10 @@ Array
  */
 $collivery->getPod( $collivery_id );
 
-$pod = $collivery->getWayPod($collivery_id);
+$pod = $collivery->getPod($collivery_id);
 Array
 (
+    [size] => 34345
     [filename] => "1234567.pdf"
     [mime] => "application/pdf"
     [file] => "DQpGcmVlRm9ybWF0dGVyLmNvbQ0KDQogICAgSFRUUFMNCiAgICBGcmVlRGF0YUdlbmVyYXRvci5jb20NCiAgICBDb250YWN0DQoNCkZvcm1hdHRlcnMNCg0KICAgIEpTT04gRm9ybWF0dGVyDQogIC........."
@@ -300,6 +301,7 @@ $collivery->getWaybill( int $collivery_id );
 $waybill = $collivery->getWaybill($colliver_idy);
 Array
 (
+    [size] => 9876546
     [filename] => "1234567.pdf"
     [mime] => "application/pdf"
     [file] => "DQpGcmVlRm9ybWF0dGVyLmNvbQ0KDQogICAgSFRUUFMNCiAgICBGcmVlRGF0YUdlbmVyYXRvci5jb20NCiAgICBDb250YWN0DQoNCkZvcm1hdHRlcnMNCg0KICAgIEpTT04gRm9ybWF0dGVyDQogIC........."
