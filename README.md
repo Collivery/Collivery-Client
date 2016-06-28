@@ -282,8 +282,6 @@ Array
  * @link http://collivery.co.za/wsdocs/#get_pod
  */
 $collivery->getPod( $collivery_id );
-
-$pod = $collivery->getPod($collivery_id);
 Array
 (
     [size] => 34345
@@ -291,14 +289,13 @@ Array
     [mime] => "application/pdf"
     [file] => "DQpGcmVlRm9ybWF0dGVyLmNvbQ0KDQogICAgSFRUUFMNCiAgICBGcmVlRGF0YUdlbmVyYXRvci5jb20NCiAgICBDb250YWN0DQoNCkZvcm1hdHRlcnMNCg0KICAgIEpTT04gRm9ybWF0dGVyDQogIC........."
  )
+
 /**
  * Retrieve the Waybill - PDF for a specific Collivery ID
  *
  * @link http://collivery.co.za/wsdocs/#get_pod
  */
-$collivery->getWaybill( int $collivery_id );
-
-$waybill = $collivery->getWaybill($colliver_idy);
+$collivery->getWaybill( $collivery_id );
 Array
 (
     [size] => 9876546
