@@ -293,7 +293,7 @@ Array
 /**
  * Retrieve the Waybill - PDF for a specific Collivery ID
  *
- * @link http://collivery.co.za/wsdocs/#get_pod
+ * @link http://collivery.co.za/wsdocs/#get_waybill
  */
 $collivery->getWaybill( $collivery_id );
 Array
