@@ -1,10 +1,6 @@
 MDS Collivery API Class
 =======================
 
-[![Latest Stable Version](https://poser.pugx.org/mds/collivery/v/stable.png)](https://packagist.org/packages/mds/collivery)
-[![License](https://poser.pugx.org/mds/collivery/license.png)](https://packagist.org/packages/mds/collivery)
-[![Build Status](https://travis-ci.org/Collivery/Collivery-Client.svg?branch=master)](https://travis-ci.org/Collivery/Collivery-Client)
-
 This is a shipping module for MDS Collivery that handles all the communication between you and the API for you.
 
 Included is a simple cache file that handles all the caching. Its a file based caching and increases speeds up to 1000 times if the cache is available. If you prefer using something like Memcache or another system, simply extend the existing classes.
