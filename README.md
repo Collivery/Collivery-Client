@@ -1,9 +1,19 @@
 MDS Collivery API Class
 =======================
 
+
 [![Latest Stable Version](https://poser.pugx.org/mds/collivery/v/stable.png)](https://packagist.org/packages/mds/collivery)
 [![License](https://poser.pugx.org/mds/collivery/license.png)](https://packagist.org/packages/mds/collivery)
 [![Build Status](https://travis-ci.org/Collivery/Collivery-Client.svg?branch=master)](https://travis-ci.org/Collivery/Collivery-Client)
+
+<hr/>
+
+# Please note - This is deprecated.
+
+The SOAP API has been succeeded by a REST JSON API, and will be shut down eventually.  
+Please see the documentation at [https://collivery.net/integration/api/v3/](https://collivery.net/integration/api/v3/#1-authentication)
+
+<hr/>
 
 This is a shipping module for MDS Collivery that handles all the communication between you and the API for you.
 
