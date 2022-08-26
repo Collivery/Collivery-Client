@@ -1,0 +1,38 @@
+{
+    "name": "mds/collivery",
+    "description": "API V3 integration that connects to MDS Collivery's Shipping API to handle all API communications as well as caching.",
+    "keywords": ["MDS", "Collivery", "Courier", "Delivery", "Shipping", "API", "South Africa"],
+    "homepage": "https://github.com/Collivery/Collivery-Client",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mds\\Collivery\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Joel Mnisi",
+            "email": "joel@mdsholdings.co.za"
+        }
+    ],
+    "require-dev": {
+        "orchestra/testbench": "^v6.24.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "require": {
+        "guzzlehttp/guzzle": "*",
+        "ext-json": "*",
+        "php": "^7.4|8.*",
+        "friendsofphp/php-cs-fixer": "^3.10"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mds\\Collivery\\ColliveryServiceProvider"
+            ],
+            "aliases": {
+                "Collivery": "Mds\\Collivery\\Facade"
+            }
+        }
+    }
+}
